@@ -1,3 +1,1 @@
-function aaa () {
-	console.log('aaa');
-}
+function ccc () {}
