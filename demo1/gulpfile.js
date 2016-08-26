@@ -23,6 +23,8 @@ var packageJSON  = require('./package');	//js检测
 var jshintConfig = packageJSON.jshintConfig;
 	jshintConfig.lookup = false;
 
+var connect = require('gulp-connect');
+
 var path = {
 	app : 'app',
 	dist : 'dist',
@@ -46,6 +48,7 @@ gulp.task('css', function () {
         }))
         .pipe(cssver()) //给css文件里引用文件加版本号（文件MD5）
         .pipe(cssmin())
+        .pipe(connect.reload())
         .pipe($.concat('all')) //内容合并
         .pipe($.rename("all.min.css")) //重命名
         .pipe(gulp.dest( path.dist + path.css ))
@@ -63,6 +66,7 @@ gulp.task('jslint', function() {
 });
 gulp.task('js', ['jslint'], function() {
 	return gulp.src([ path.app + path.public + '/*.js', '!'+ path.app+ path.public +'/*.*.js' ])
+		.pipe(connect.reload())
 		.pipe($.concat('all')) //内容合并
 		.pipe($.rename("all.min.js")) //重命名
 		.pipe($.uglify())//压缩
@@ -86,6 +90,7 @@ gulp.task('htmlReplace', ['html'], function() {
 		removeEmptyAttributes: true,//删除所有空格作属性值 <input id="" /> ==> <input />
 	};
 	gulp.src([ path.dist + '/*.html' ])
+		.pipe(connect.reload())
 		.pipe($.htmlmin(htmlConfig))
 		.pipe($.replace('\/'+ path.dist +'\/', ''))
 		.pipe(gulp.dest( path.dist ))
@@ -100,7 +105,33 @@ gulp.task('clean', function() {
 		.pipe($.clean());
 });
 
+//|**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//| ✓ WEBServer模块
+//'~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+gulp.task('server:dist', function() {
+  connect.server({
+    root: path.dist,
+    livereload: true
+  });
+});
 
+// 开发目录
+gulp.task('server', function() {
+  connect.server({
+    root: './',
+    livereload: true
+  })
+});
+gulp.task('watch', function () {
+  gulp.watch(['*.html'], ['htmlReplace']);
+  gulp.watch([path.app + path.css + '/*.css'], ['css']);
+  gulp.watch([path.app + path.js + '/*.js'], ['js']);
+});
+
+
+// 开始
 gulp.task('default', ['clean'], function() {
 	gulp.start('htmlReplace');
 });
+
+gulp.task('serve', ['default','server','watch']);

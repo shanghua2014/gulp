@@ -3,7 +3,7 @@ body{font-family:"Helvetica Neue", Helvetica, Arial, "Microsoft Yahei UI", "Micr
 a,img,select,textarea{border:0; text-decoration:none;}
 li{list-style-type: none;}
 
-body{font-size:14px; font-family:"microsoft yahei";}
+body{font-size:14px; font-family:"microsoft yahei";background:lightblue;}
 .none{display: none;}
 .block{display: block;}
 .por{position: relative;}

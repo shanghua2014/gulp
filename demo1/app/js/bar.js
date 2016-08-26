@@ -1,6 +1,5 @@
 var num = 0;
-ads = 1;
-
+console.log(1111);
 function func(){
     var a=1,b;
 
