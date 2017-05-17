@@ -108,12 +108,6 @@ gulp.task('clean', function() {
 //|**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //| ✓ WEBServer模块
 //'~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-gulp.task('server:dist', function() {
-  connect.server({
-    root: path.dist,
-    livereload: true
-  });
-});
 
 // 开发目录
 gulp.task('server', function() {

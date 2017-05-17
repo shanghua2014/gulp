@@ -1,0 +1,33 @@
+html,body,nav,header,footer,div,p,span,ul,li,h1,h2,table,table tr,table tr td,textarea{margin:0; padding:0;}
+html,body{width:100%;overflow-x:hidden;}
+body{font-family:"Arial","Microsoft Yahei", "Helvetica Neue", Helvetica;}
+a,img,select,textarea{border:0; text-decoration:none;}
+li{list-style-type: none;}
+
+.bd{border:1px solid;}
+.block{display:block}
+.tac{text-align: center}
+.tal{text-align: left}
+.tar{text-align: right}
+.fl{float:left;}
+.fr{float:right;}
+.clf{clear:both}
+.wid100{width:100%;}
+.pa{position: absolute}
+
+.logos{background:#f6f6f6;padding:2% 0;}
+.logos div{width:20%}
+.logos div.logo1{margin-left:16px;}
+.form input{height:45px;line-height:45px;border-radius:5px;margin-top:28px;display:block}
+.form div:last-child input{margin-top:50px;}
+.form div.mob{margin-top:10px;}
+.form .mob{height:20px;line-height:20px;padding:20px 10px;color:#9B9B9B;border:1px solid #DCDCDC;}
+.form .code{margin-top:10px;}
+.form .submit{background:#901D23;border:0;color:#fff;font-size:20px;}
+.font{font-size:10px;color:#666;margin-top:50px;margin-bottom:36px;}
+.font p{padding:0 20px;}
+
+.mask{position:absolute;width:0;height:0;background:#000;opacity: .7;top:0;left:0;z-index: 1}
+.alert{padding:5% 0 0 0;top:50%;background:#fff;left:0;border-radius: 8px;z-index: 2}
+.alert h1{font-size:15px;color: #353535;padding-bottom:13px;}
+.alert a{padding:3% 0;border-top:1px solid #D5D5D5;font-size: 16px;color: #A4494D;margin-top:5%;}
