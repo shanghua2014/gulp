@@ -50,7 +50,7 @@ var path = {
 //| ✓ css模块
 //'~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 gulp.task('css', function () {
-    gulp.src([ path.app + path.public + '/user.css',path.app + path.public + '/base.css','!'+ path.app+ path.public +'/*.*.css' ])
+    gulp.src([ path.app + path.public + '/*.css','!'+ path.app+ path.public +'/*.*.css' ])
         .pipe(cssmin({
             advanced: false,//类型：Boolean 默认：true [是否开启高级优化（合并选择器等）]
             compatibility: 'ie7',//保留ie7及以下兼容写法 类型：String 默认：''or'*' [启用兼容模式； 'ie7'：IE7兼容模式，'ie8'：IE8兼容模式，'*'：IE9+兼容模式]
@@ -77,34 +77,22 @@ gulp.task('css', function () {
 //     .pipe($.jshint.reporter('default'))
 // });
 gulp.task('js', function() {	// 需求 要 压缩 合并 的JS
-	return gulp.src([
-			path.app + path.public + '/a_config.js',
-			'!'+ path.app+ path.public +'/*.*.js'
-		])
+	return gulp.src([ path.app + path.public + '/*.js', '!'+ path.app+ path.public +'/*.*.js' ])
 		.pipe(ngAnnotate())	//angular 压缩防报错
         .pipe(ngmin({dynamic: false}))	//angular 压缩防报错
 		.pipe(connect.reload())
-		.pipe($.concat('user')) //内容合并
-		.pipe($.rename("user.min.js")) //重命名
+		.pipe($.concat('hx')) //内容合并
+		.pipe($.rename("hx.min.js")) //重命名
 		.pipe($.uglify({outSourceMap: false})) // 参数：angular 压缩防报错
 		.pipe(gulp.dest( path.user + path.js ))
 		//.pipe($.notify({ message: 'JS----------------------------ok' }));
 });
-gulp.task('otherjs', function() {	// 其他JS直接复制
-	return gulp.src([
-			path.app + path.public + '/city/**',
-			path.app + path.public + '/photoclip/**',
-			path.app + path.public + '/date/**',
-			path.app + path.public + '/a_setting_base.js',
-		])
-		.pipe(gulp.dest( path.user ))
-		//.pipe($.notify({ message: 'OtherJS----------------------------ok' }));
-});
+
 
 //|**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //| ✓ html模块
 //'~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-gulp.task('html', ['js','otherjs','css'], function() {
+gulp.task('html', ['js','css'], function() {
 	var htmlConfig = {
 		removeComments: true,//清除HTML注释
 		collapseWhitespace: true,//压缩HTML

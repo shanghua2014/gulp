@@ -1,0 +1,134 @@
+body, html{height:auto;}
+body{background:#eaeaea;}
+.wid100{width:100%;}
+.home{ width:1100px; margin: 0 auto;overflow: hidden;}
+.home img{margin-top:15px;}
+.home .playBtn{
+    background:url(./);
+    width: 65px;
+    height: 65px;
+    left: 50%;
+    top: 50%;
+    margin: 79px 0 0 -32px;
+    cursor: pointer;
+    z-index: 9;}
+    .home .playBtn img{width:100%;height:100%;margin:0;}
+.home1{ width:1100px; height:auto; margin: 0 auto;color:#6e6e6e;padding-top:80px}
+.home1 .p1{width:730px;font-weight: bold;}
+.home1 .p1 .sp1{width:550px;color:#901d23;font-size:22px;letter-spacing: 4px;line-height:45px;padding-bottom:58px;}
+.home1 .p1 .sp2, .home1 .p3{text-indent: 2rem;line-height: 35px;}
+.home1 .p2{padding-top: 25px;}
+.home1 .p3{font-weight: bold;padding-top: 18px;}
+.main_visual{width:1100px; margin:40px auto 0;}
+.main_image {width:1100px; height:465px; overflow:hidden; margin:0 auto; position:relative;}
+.main_image ul {width:9999px; height:465px; overflow:hidden; position:absolute; top:0px; left:0}
+.main_image li {float:left; width:100%; height:465px; position:relative}
+.main_image li span {display:block; width:1100px; height:465px; position:absolute; top:0; left:0}
+.main_image li a {display:block; width:1100px; height:465px}
+.main_image li .mask{ position:absolute; background:#000; left:0; bottom:0; width:1100px; height:120px; opacity:.7;}
+.main_image li p{ width:950px; height:90px; display:block; color:#fff; position:absolute; left:130px; bottom:0; line-height:30px; font-size:18px;}
+
+.flicking_con { width:1100px; height:100px; margin:0 auto; position:relative; margin-bottom:30px}
+.flicking_con .flicking_inner{ position:absolute; top:0px; left:-55px; z-index:9; }
+.flicking_con .flicking_inner .line{ position:absolute; width:1090px; height:3px; background:#d3d3d3; top:71px; left:55px; z-index:1}
+.flicking_con .flicking_inner div{ float:left; width:80px; height:85px; background:url('/special/ldyimages/list.png') 30px 65px no-repeat; display:block; position:absolute; z-index:2; cursor:pointer; text-align:center; font-size:14px; color:#9b9b9b; line-height:20px;}
+.flicking_con .flicking_inner div span{ display:block; font-size:14px; color:#6e6e6e;}
+.flicking_con .flicking_inner div span{ display:block; font-size:14px; color:#6e6e6e;}
+.flicking_con div.sp1{ left:60px}
+.flicking_con div.sp2{ left:180px}
+.flicking_con div.sp3{ left:295px}
+.flicking_con div.sp4{ left:545px}
+.flicking_con div.sp5{ left:674px}
+.flicking_con div.sp6{ left:804px}
+.flicking_con div.sp7{ left:934px}
+.flicking_con div.sp8{ left:418px;}
+.flicking_con div.sp9{ left:1055px}
+.flicking_con div.dv.on{ color:#6e6e6e; font-size:16px}
+.flicking_con div.dv.on span{ color:#9a0000; font-size:16px;}
+.flicking_con .dv.on {background:url('/special/ldyimages/listh.png') 30px 64px no-repeat;}
+#btn_prev,#btn_next{z-index:11111;position:absolute;display:block;width:22px!important;height:42px!important;top:50%;margin-top:-37px;display:none;}
+#btn_prev{background:url('/special/ldyimages/hover_left.png') no-repeat left top;left:30px;}
+#btn_next{background:url('/special/ldyimages/hover_right.png') no-repeat right top;right:30px;}
+
+
+
+
+.newsList{ width:1100px; float:left; background:#eaeaea; padding-top:20px}
+.newsList .ti{ width:325px; height:40px; margin-bottom:20px}
+.newsList ul{ width:1140px; margin:0 auto; clear: both}
+.newsList li{ width:307px; height:240px; display:block; float:left; background:#fff; margin:0 5px 10px 5px; padding:20px 30px 20px 20px}
+.newsList li .title{ font-size: 16px; color:#666;}
+.newsList li .title .tx{ float: left; width:40px; height:40px; overflow: hidden; display:block; margin-right:20px}
+.newsList li .title .tx img{ width:40px; height:40px;}
+.newsList li .title h3{ font-size: 16px; margin:0 0 5px 0; padding:0px; font-weight:normal; height:18px;line-height:18px;}
+.newsList li p{ font-size: 13px; color: #666; line-height: 28px; height:170px; margin-top:10px}
+.newsList li .time{ font-size: 12px; color:#ababab;}
+.newsList li .time .fleft{ float:left}
+.newsList li .time .fright{ float:right; background: url('/special/ldyimages/list_14.png') no-repeat; padding-left:25px;padding-top: 1px;}
+.newsList .more{ width:1130px; height:60px; margin:0 auto; cursor:pointer}
+.newsList .more img{ margin: 20px auto 0; width:43px; height:20px; display: block;}
+
+#mask2{width:0;height:0;overflow:hidden;position: absolute;top:0;left:0;background:#000;opacity: .6;z-index: 98}
+#popu2 #sharePop span:first-child,
+#popu2 #comment span:first-child,
+.comment .vipIcon{background:url(../img/icon_1.png) no-repeat;}
+#popu2{width:914px;height:538px;position: absolute;z-index: 99;background:#F5F5F5;top:0;}
+#popu2 .img{height:494px;}
+#popu2 #moveSlicePop div{width:914px;height:494px;line-height:354px;color:#000;text-align: center;}
+#popu2 #close,
+#popu2 .share_pop .close,
+#popu2 .comments .close{font-size:1rem;font-family: 黑体;right:10px;cursor:pointer;top:26px;color:#fff;opacity: 1;text-shadow:none;font-weight: normal}
+#popu2 #close{cursor: pointer;}
+#popu2 .img .playBtn{top:50%;left:50%;margin:-48px 0 0 -28px;}
+#popu2 .share{padding:0 27px;}
+#popu2 .share li{float:left; color:#000;height:40px;line-height:40px;margin-right:35px;cursor: pointer;}
+#popu2 #sharePop span:first-child,
+#popu2 #comment span:first-child{width:33px;height:33px;margin:3px 8px 0 0;}
+#popu2 #sharePop span:first-child{background-position: -44px -167px;}
+#popu2 #comment span:first-child{background-position: -132px -167px;}
+#popu2 .share_pop,
+#popu2 .comments{top:44px;left:0;}
+#popu2 .share_pop,
+#popu2 .share_pop .bg{width:255px;height:75px;}
+#popu2 .share_pop .bg,
+#popu2 .comments .bg{height:565px;background:#181613;opacity:.9;top:0;left:0;}
+#popu2 .share_pop .bg{height:73px}
+#popu2 .share_pop .close{right:5px;top:5px;z-index:1;}
+#popu2 .share_pop .icons{width:255px;height:75px;padding:25px 20px 0 20px;top:0;left:0}
+#popu2 .share_pop .icons a{width:17px;height:25px;background:url(/img/icon_19_1.png) no-repeat;overflow: hidden;}
+#popu2 .share_pop .icons a:last-child{margin-right:0;}
+#popu2 .share_pop .icons a.pyq{background-position: -43px 0;}
+#popu2 .share_pop .icons a.qq{background-position: -86px 0;}
+#popu2 .share_pop .icons a.qzone{background-position: -127px 0;}
+#popu2 .share_pop .icons a.sina{background-position: -166px 0;}
+#popu2 .comments{width:914px;}
+#popu2 .comments .commentBox{margin:25px 0 0 62px;}
+#popu2 .comments .alertMsg{margin-bottom:10px;}
+#popu2 .comments .alertMsg,
+#popu2 .comments .alertMsg textarea,
+#popu2 .comments .loading{width:790px}
+#popu2 .comments .alertMsg textarea{height:177px;resize: none;padding:14px;color:#c3c3c3;line-height:2rem;font-size:1rem;background:#2e2c2b;}
+#popu2 .comments .alertMsg .publish{width: 130px;background:#8a1d22;color:#fff;height: 38px;line-height: 30px;border-bottom: 8px solid #610007;}
+#popu2 .comments .alertMsg #count{right:40px;bottom:84px; color:#c0bfbf;font-size:12px;}
+#popu2 .play_btn{width:87px;height:87px;top:50%;left:50%;margin:-43px 0 0 -43px;}
+#movieComment{width:810px;height:257px;overflow-y:auto; overflow-x: hidden;}
+.comment{width:239px;padding:15px 10px;margin:0 6px 8px 0 ;background:#2e2c2b;font-size:1.2rem;color:#d9d9d9;}
+.comment .title{height:32px;line-height: 1rem;}
+.comment .img_11{width:28px;height:28px;}
+.comment .img_11 img{width:100%;height:100%;}
+.comment .username{margin-left:12px;font-size:12px;color:#fff;}
+.comment .vipIcon{width:19px;height:21px;overflow:hidden;top:20px;left:40px;background-position:-109px 0;}
+.comment .vipIcon_1{background-position:-109px -37px;}
+.comment .info{height:128px;overflow:hidden;padding-top:12px;margin-bottom:18px;font-size:10px;line-height:1rem;}
+.comment .tim{font-size:12px;padding-top:20px;color:#999;line-height:0;}
+#popu2 #comment .comment .tim span:first-child{width:145px;height:auto;font-size:1rem;}
+#popu2 #comment .comment .tim .zan span:first-child{width:20px;height:16px;overflow: hidden;margin:0;float:left;cursor: pointer;}
+#popu2 #comment .comment .tim .zan span{background-position:-109px -67px;}
+#popu2 #comment .comment .tim .zan span.zanSpanA{background-position:-88px -67px;}
+#popu2 #comment .comment .tim .zan span:last-child{line-height:1.3rem;}
+#popu2 .comments .loading{line-height:1.2rem;padding-top:55px;}
+#popu2 .comments .loading .more {
+    width: 42px;
+    height: 20px;
+    background-position: -109px -100px;
+}
