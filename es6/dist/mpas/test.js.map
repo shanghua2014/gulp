@@ -1,0 +1,1 @@
+{"version":3,"sources":["../ts/test.ts"],"names":[],"mappings":"AAAA;IACI,OAAO,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC;IACnB,OAAO,CAAC,GAAG,CAAC,MAAM,CAAC,CAAA;AACvB,CAAC","file":"../js/test.js","sourcesContent":["function abc() {\n    console.log('abc');\n    console.log('1111')\n}"]}

@@ -15,3 +15,7 @@ span p {
   height: 20px;
   line-height: 20px;
 }
+
+* {
+  margin: 0;
+}
